@@ -1,5 +1,6 @@
 package main
 
+// Macià Salvà Salvà i Juan Francisco Hernandez Fernandez
 import (
 	"log"
 	"os"
@@ -25,14 +26,6 @@ func main() {
 	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
-
-	//oso de permisos -/
-	//abejas despierte oso -/
-	//pote miel -/
-	//contador cada porcion de miel
-
-	//Para comprobar si el mensaje ha sido redistribuido
-	//mensaje.redelidered
 
 	ch, err := conn.Channel()
 	failOnError(err, "Failed to open a channel")
@@ -79,7 +72,7 @@ func main() {
 	msgs1, err1 := ch.Consume(
 		q1.Name, // queue
 		"",      // consumer
-		true,    // auto-ack  ------------------
+		true,    // auto-ack
 		false,   // exclusive
 		false,   // no-local
 		false,   // no-wait

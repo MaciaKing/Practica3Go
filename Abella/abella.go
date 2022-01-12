@@ -5,6 +5,8 @@ rabbitmqctl stop_app
 rabbitmqctl reset
 rabbitmqctl start_app
 */
+
+// Macià Salvà Salvà i Juan Francisco Hernandez Fernandez
 import (
 	"log"
 	"os"
